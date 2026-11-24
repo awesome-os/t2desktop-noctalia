@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=T2Desktop Noctalia (Awesome-OS)
+Comment=Sovereign Wayland Desktop — Noctalia Shell + Awesome-OS Explorer + b8g-ghost CAS
+Exec=t2desktop-noctalia-session
+Type=Application
+DesktopNames=T2Desktop-Noctalia

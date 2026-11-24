@@ -1,0 +1,42 @@
+name: CI & Release (T2Desktop Noctalia)
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  test-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Run T2Desktop Noctalia tests
+        run: node --test test/t2desktop-noctalia.test.mts
+
+      - name: Package & Publish GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v') || github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VER=$(node -p "JSON.parse(require('fs').readFileSync('package.json','utf8')).version")
+          TAG="${GITHUB_REF#refs/tags/}"
+          if [[ "${GITHUB_REF}" != refs/tags/* ]]; then TAG="v${VER}"; fi
+          OUT="t2desktop-noctalia-${TAG}.tar.zst"
+          tar --zstd -cf "$OUT" src config package.json README.md LICENSE
+          sha256sum "$OUT" > SHA256SUMS.txt
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "$OUT" SHA256SUMS.txt --clobber
+          else
+            gh release create "$TAG" "$OUT" SHA256SUMS.txt \
+              --title "T2Desktop Noctalia ${TAG}" \
+              --notes "Awesome-OS T2Desktop Noctalia Edition pairing awesome-os/noctalia + awesome-os/explorer + b8g-ghost cas-v1."
+          fi

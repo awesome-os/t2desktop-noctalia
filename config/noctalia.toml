@@ -1,0 +1,8 @@
+# Awesome-OS T2Desktop Noctalia Edition — Lumi Chromatic Defaults
+[theme]
+name = "lumi-chromatic"
+
+[apps]
+file_manager = "explorer"
+browser = "sectium-browser"
+editor = "code-oss"

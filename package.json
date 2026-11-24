@@ -1,0 +1,17 @@
+{
+  "name": "@awesome-os/t2desktop-noctalia",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "T2Desktop Noctalia Edition — Sovereign Wayland desktop on T2Linux + awesome-os/noctalia (C++23 Wayland shell) + awesome-os/explorer (C++23 Wayland file manager) + b8g-ghost cas-v1",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "main": "./src/index.mts",
+  "exports": {
+    ".": "./src/index.mts"
+  },
+  "scripts": {
+    "test": "node --test test/t2desktop-noctalia.test.mts"
+  }
+}
