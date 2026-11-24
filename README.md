@@ -18,3 +18,13 @@ Sibling edition: [`awesome-os/t2desktop-omarchy`](https://github.com/awesome-os/
 ```powershell
 node --test test/t2desktop-noctalia.test.mts
 ```
+
+## Quick Install & Run (Windows / Linux / macOS)
+
+```sh
+# Install globally via awesome-os/pnpm (all platforms)
+pnpm add -g github:awesome-os/t2desktop-noctalia
+
+# Run directly (all platforms)
+t2desktop-noctalia --help
+```
