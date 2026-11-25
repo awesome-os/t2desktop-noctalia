@@ -1,0 +1,40 @@
+{
+  "schema": "holo-compiler-lockfile-v1",
+  "abiMagic": "0x33564742",
+  "casLayout": "v11",
+  "repo": "awesome-os/t2desktop-noctalia",
+  "targets": [
+    "win64",
+    "linux-x64",
+    "linux-arm64",
+    "macos-arm64",
+    "wasm32-wasi"
+  ],
+  "generatedAt": "2026-11-24T23:53:02.473Z",
+  "dependencies": [
+    {
+      "id": "awesome-os/t2desktop-noctalia/SHA256SUMS.txt",
+      "kind": "object",
+      "version": "v0.1.0",
+      "target": "any",
+      "sha512": "eab00de2e343cfb96926dbd58945aee8fb15553cc111f6d319575d646d9c2f2ece8e333e4f707064b9197c9f250f84b168f61d705145aec45efeadbaaaf15206",
+      "size": 100,
+      "executable": false,
+      "blob": "v11/files/ea/eab00de2e343cfb96926dbd58945aee8fb15553cc111f6d319575d646d9c2f2ece8e333e4f707064b9197c9f250f84b168f61d705145aec45efeadbaaaf15206",
+      "url": "https://github.com/awesome-os/t2desktop-noctalia/releases/download/v0.1.0/SHA256SUMS.txt",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/t2desktop-noctalia/t2desktop-noctalia-v0.1.0.tar.zst",
+      "kind": "object",
+      "version": "v0.1.0",
+      "target": "any",
+      "sha512": "7a1fa5dcf657f4de3f57e76a361f1f69902d3bf6e1c89026c7a65fdb1049ba79fd5d7ae2725e13845199f5a0044a5e2209ebd25d8f763479f8e1a28840c86098",
+      "size": 2586,
+      "executable": false,
+      "blob": "v11/files/7a/7a1fa5dcf657f4de3f57e76a361f1f69902d3bf6e1c89026c7a65fdb1049ba79fd5d7ae2725e13845199f5a0044a5e2209ebd25d8f763479f8e1a28840c86098",
+      "url": "https://github.com/awesome-os/t2desktop-noctalia/releases/download/v0.1.0/t2desktop-noctalia-v0.1.0.tar.zst",
+      "dependencies": []
+    }
+  ]
+}
